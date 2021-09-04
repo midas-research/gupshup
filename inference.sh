@@ -1,3 +1,4 @@
+#!/bin/bash 
 TASK_TYPE = $1
 MODEL_NAME_PATH= $2
 
