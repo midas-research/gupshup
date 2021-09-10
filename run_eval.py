@@ -83,7 +83,7 @@ def datetime_now():
     return datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 
-def run_generate(verbose=True
+def run_generate(verbose=True,
     model_name_path= None,
     src_txt= None,
     tar_txt= None,
