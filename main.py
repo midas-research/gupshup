@@ -1,6 +1,4 @@
 import streamlit as st
-# To make things easier later, we're also importing numpy and pandas for
-# working with sample data.
 import numpy as np
 import pandas as pd
 import os
@@ -12,7 +10,7 @@ task_type= st.sidebar.selectbox(
     'Task type',["Hindi to English","English to English"]
 )
 model_name= st.sidebar.selectbox(
-    'Model',["Pegasus","mBart"]
+    'Model',["Pegasus","mBart","Bart","GPT", "T5", "T5_MTL"]
 )
 
 src_form = st.sidebar.form(key='src_form')
@@ -20,10 +18,7 @@ src_ip=src_form.text_input(label='Please enter path to conversastion/source file
 tar_ip=src_form.text_input(label='Please enter path to summary/target file. [optional]')
 src_submit_button = src_form.form_submit_button(label='Submit')
 st.sidebar.markdown("<h1 style='text-align: center;'>OR</h1>", unsafe_allow_html=True)
-# st.sidebar.write("### Or")
-# tar_form = st.sidebar.form(key='tar_form')
-# tar_ip=tar_form.text_input(label='Please enter path to the summary file')
-# tar_submit_button = tar_form.form_submit_button(label='Submit')
+
 
 conv_form = st.sidebar.form(key='conv_form')
 conv_ip=conv_form.text_input(label='Please enter the conversastion')
@@ -81,7 +76,7 @@ if task_type=="English to English":
     tt="e2e"
 elif task_type=="Hindi to English":
     tt="h2e"
-model_name_path="ad6398/gupshup_"+str(tt)+"_"+str(model_name).lower()
+model_name_path="rajivratn/gupshup_"+str(tt)+"_"+str(model_name).lower()
 
 if src_file== None or os.path.isfile(src_file)==False:
     st.write("### source file is empty or invalid")
