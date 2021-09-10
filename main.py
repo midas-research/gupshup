@@ -76,7 +76,7 @@ if task_type=="English to English":
     tt="e2e"
 elif task_type=="Hindi to English":
     tt="h2e"
-model_name_path="rajivratn/gupshup_"+str(tt)+"_"+str(model_name).lower()
+model_name_path="midas/gupshup_"+str(tt)+"_"+str(model_name).lower()
 
 if src_file== None or os.path.isfile(src_file)==False:
     st.write("### source file is empty or invalid")
