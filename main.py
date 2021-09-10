@@ -9,7 +9,7 @@ from run_eval import run_generate
 st.write('# GupShup')
 st.write('## Summarizing Open-Domain Code-Switched Conversations')
 task_type= st.sidebar.selectbox(
-    'Task type',["English to English","Hindi to English"]
+    'Task type',["Hindi to English","English to English"]
 )
 model_name= st.sidebar.selectbox(
     'Model',["Pegasus","mBart"]

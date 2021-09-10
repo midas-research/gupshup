@@ -5,7 +5,9 @@ __pycache__/
 
 # C extensions
 *.so
-
+.lock
+conversastion.txt
+generated_summary.txt
 # Distribution / packaging
 .Python
 build/
