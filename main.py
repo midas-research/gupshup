@@ -3,7 +3,7 @@ import streamlit as st
 # working with sample data.
 import numpy as np
 import pandas as pd
-from os import os
+import os
 from run_eval import run_generate
 
 st.write('# GupShup')
@@ -101,7 +101,7 @@ else:
 
     if conv_submit_button:
         st.write("summary:")
-        fp= open(gen_path,'r')
+        fp= open(gen_file,'r')
         summary= fp.readlines()
         fp.close()
         st.write(summary)
@@ -110,7 +110,7 @@ else:
         if tar_file!=None:
             st.write("scores: ", result)
         
-        st.write("summary is stored in ", gen_path)
+        st.write("summary is stored in ", gen_file)
 
 
 

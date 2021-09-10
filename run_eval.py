@@ -108,9 +108,9 @@ def run_generate(verbose=True,
     """
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("model_name", type=str, help="like facebook/bart-large-cnn,t5-base, etc.")
-    parser.add_argument("input_path", type=str, help="like cnn_dm/test.source")
-    parser.add_argument("save_path", type=str, help="where to save summaries")
+    parser.add_argument("--model_name", type=str, required=False,help="like facebook/bart-large-cnn,t5-base, etc.")
+    parser.add_argument("--input_path", type=str, required=False,help="like cnn_dm/test.source")
+    parser.add_argument("--save_path", type=str, required=False,help="where to save summaries")
     parser.add_argument("--reference_path", type=str, required=False, help="like cnn_dm/test.target")
     parser.add_argument("--score_path", type=str, required=False, default="metrics.json", help="where to save metrics")
     parser.add_argument("--device", type=str, required=False, default=DEFAULT_DEVICE, help="cuda, cuda:1, cpu etc.")
