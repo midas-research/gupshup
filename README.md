@@ -10,12 +10,26 @@ GupShup: Summarizing Open-Domain Code-Switched Conversations (EMNLP 2021)
 
 # Table of Contents
 
-## Dataset
+<!--ts-->
+
+- [Dataset](#dataset)
+- [Setup](#setup)
+  - [Models and Inference](#models-and-inference)
+- [Usage](#usage)
+  - [Programmatic Usage](#programmatic-usage)
+    - [A Quick Example](#a-quick-example)
+  - [Using Streamlit](#using-streamlit)
+    - [A Quick Example](#a-quick-example)
+- [References](#references)
+
+<!--te-->
+
+# Dataset
 Please request for data using this[TBA] Google form.
 
-## Setup
+# Setup
 
-### Models and Inference
+## Models and Inference
 1. Clone this repo and Create a python virtual environment (https://docs.python.org/3/library/venv.html). Install the required pacakges using
 ```
 pip install -r requirements.txt
@@ -28,18 +42,18 @@ streamlit run app.py
 
 Please create an issue if you are facing any difficulties in replicating the results. 
 
-## Usage
+# Usage
 
-### Programmatic Usage
+## Programmatic Usage
 
-#### A Quick Example
+### A Quick Example
 
-### Using Streamlit
+## Using Streamlit
 
-#### A Quick Example
+### A Quick Example
 
 
-## References
+# References
 
 Please cite [[1]](https://arxiv.org/abs/2104.08578) if you found the resources in this repository useful.
 
