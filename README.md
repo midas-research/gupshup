@@ -3,10 +3,31 @@ GupShup: Summarizing Open-Domain Code-Switched Conversations EMNLP 2021
 
 
 ### Dataset
-Please request for data using this[TBA] Google form.
+Please request for data using this[TBA] Google form. There
 
 ## Models
+1. Hinglsih Dilaogues to English Summary
 
+| Model   | Huggingface Alias                                                             |
+|---------|-------------------------------------------------------------------------------|
+| mBART   | [midas/gupshup_h2e_mbart](https://huggingface.co/midas/gupshup_h2e_mbart)     |
+| PEGASUS | [midas/gupshup_h2e_pegasus](https://huggingface.co/midas/gupshup_h2e_pegasus) |
+| T5 MTL  | [midas/gupshup_h2e_t5_mtl](https://huggingface.co/midas/gupshup_h2e_t5_mtl)   |
+| T5      | [midas/gupshup_h2e_t5](https://huggingface.co/midas/gupshup_h2e_t5)           |
+| BART    | [midas/gupshup_h2e_bart](https://huggingface.co/midas/gupshup_h2e_bart)       |
+| GPT-2   | [midas/gupshup_h2e_gpt](https://huggingface.co/midas/gupshup_h2e_gpt)         |
+
+
+2. English Dialogues to English Summary
+
+| Model   | Huggingface Alias                                                             |
+|---------|-------------------------------------------------------------------------------|
+| mBART   | [midas/gupshup_e2e_mbart](https://huggingface.co/midas/gupshup_e2e_mbart)     |
+| PEGASUS | [midas/gupshup_e2e_pegasus](https://huggingface.co/midas/gupshup_e2e_pegasus) |
+| T5 MTL  | [midas/gupshup_e2e_t5_mtl](https://huggingface.co/midas/gupshup_e2e_t5_mtl)   |
+| T5      | [midas/gupshup_e2e_t5](https://huggingface.co/midas/gupshup_e2e_t5)           |
+| BART    | [midas/gupshup_e2e_bart](https://huggingface.co/midas/gupshup_e2e_bart)       |
+| GPT-2   | [midas/gupshup_e2e_gpt](https://huggingface.co/midas/gupshup_e2e_gpt)         |
 
 ## Inference
 
@@ -25,7 +46,7 @@ pip install -r requirements.txt
 *   **bs** : batch size
 *   **device**:
 
-Please make sure you have downloaded gupshup dataset usig above google form and provide correct path to these files in `input_path` and `refrence_path` of the argument. or you can simply put test.source and test.target in `data` folder and use following command: 
+Please make sure you have downloaded gupshup dataset usig above google form and provide correct path to these files in `input_path` and `refrence_path` of the argument. or you can simply put `test.source` and `test.target` in `data` folder. For example, to generate English summary from Hinglish dialogues in  
 
 ```
 python run_eval.py \
