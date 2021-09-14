@@ -3,10 +3,15 @@ GupShup: Summarizing Open-Domain Code-Switched Conversations EMNLP 2021
 
 
 ### Dataset
-Please request for data using this[TBA] Google form. There
+Please request for data using this[TBA] Google form. Dataset is available for `Hinglish Dilaogues to English Summarization`(h2e) and  `English Dialogues to English Summarization`(e2e). For each task, Dialogues/conversastion have `.source`(train.source) as file extension whereas Summary has `.target`(train.target) file extension.
 
 ## Models
-1. Hinglsih Dilaogues to English Summary
+All models weight are uploaded on Huggingface model hub. Either user can directly download these weights in their local and provide this path to `model_name` argument in the scripts or use the provided alias (to `model_name` argument) in scripts directly, this will lead to download weights automatically by scripts. 
+
+Model names are aliased in "gupshup_TASK_MODEL" sense, where "TASK" can be h2e,e2e and MODEL can be mbart,pegasus, etc. as listed below.
+
+
+**1. Hinglish Dilaogues to English Summary (h2e)**
 
 | Model   | Huggingface Alias                                                             |
 |---------|-------------------------------------------------------------------------------|
@@ -18,7 +23,7 @@ Please request for data using this[TBA] Google form. There
 | GPT-2   | [midas/gupshup_h2e_gpt](https://huggingface.co/midas/gupshup_h2e_gpt)         |
 
 
-2. English Dialogues to English Summary
+**2. English Dialogues to English Summary (e2e)**
 
 | Model   | Huggingface Alias                                                             |
 |---------|-------------------------------------------------------------------------------|
@@ -46,14 +51,26 @@ pip install -r requirements.txt
 *   **bs** : batch size
 *   **device**:
 
-Please make sure you have downloaded gupshup dataset usig above google form and provide correct path to these files in `input_path` and `refrence_path` of the argument. or you can simply put `test.source` and `test.target` in `data` folder. For example, to generate English summary from Hinglish dialogues in  
+Please make sure you have downloaded Gupshup dataset using above google form and provide correct path to these files in `input_path` and `refrence_path` of the argument. Or you can simply put `test.source` and `test.target` in `data/h2e/`(hinglish to english) or `data/e2e/`(english to english) folder. For example, to generate English summary from Hinglish dialogues using mbart model, run following command
 
 ```
 python run_eval.py \
-    --model_name "midas/gupshup_h2e_mbart" \
-    --input_path  "data/test.source" \
-    --save_path "generated_summary.txt" \
-    --reference_path data/test.target \
+    --model_name midas/gupshup_h2e_mbart \
+    --input_path  data/h2e/test.source \
+    --save_path generated_summary.txt \
+    --reference_path data/h2e/test.target \
+    --score_path scores.txt \
+    --bs 8
+
+```
+
+Another example, to generate English summary from English dialogues using Pegasus model
+```
+python run_eval.py \
+    --model_name midas/gupshup_e2e_pegasus \
+    --input_path  data/e2e/test.source \
+    --save_path generated_summary.txt \
+    --reference_path data/e2e/test.target \
     --score_path scores.txt \
     --bs 8
 
