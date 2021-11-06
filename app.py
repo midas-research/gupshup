@@ -7,7 +7,7 @@ from run_eval import run_generate
 st.write("# GupShup")
 st.write("## Summarizing Open-Domain Code-Switched Conversations")
 task_type = st.sidebar.selectbox(
-    "Task type", ["Hindi to English", "English to English"]
+    "Task type", ["Hinglish to English", "English to English"]
 )
 model_name = st.sidebar.selectbox(
     "Model", ["Pegasus", "mBart", "Bart", "GPT", "T5", "T5_MTL"]
@@ -75,7 +75,7 @@ if src_submit_button:
 tt = "h2e"
 if task_type == "English to English":
     tt = "e2e"
-elif task_type == "Hindi to English":
+elif task_type == "Hinglish to English":
     tt = "h2e"
 model_name_path = "midas/gupshup_" + str(tt) + "_" + str(model_name).lower()
 
