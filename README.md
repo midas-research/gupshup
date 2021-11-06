@@ -41,6 +41,7 @@ Model names were aliased in "gupshup_TASK_MODEL" sense, where "TASK" can be h2e,
 ### Using command line
 1. Clone this repo and create a python virtual environment (https://docs.python.org/3/library/venv.html). Install the required packages using
 ```
+git clone https://github.com/midas-research/gupshup.git
 pip install -r requirements.txt
 ```
 
@@ -86,6 +87,7 @@ Please create a copy of this [Notebook on Google colab](https://colab.research.g
 
 1. Clone this repo and Create a python virtual environment (https://docs.python.org/3/library/venv.html). Install the required packages using
 ```
+git clone https://github.com/midas-research/gupshup.git
 pip install -r requirements.txt
 ```
 
