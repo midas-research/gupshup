@@ -38,7 +38,7 @@ class GPT21024Dataset(Dataset):
 	#def __init__(self, root_dir, ids_file, mode='train',length=None):
 	def __init__(self, text, ctext, tokenizer, source_len, summ_len):
 		self.tokenizer = add_special_tokens(tokenizer)
-		self.data = dataframe
+		# self.data = dataframe
 		self.source_len = source_len
 		self.summ_len = summ_len
 		# self.text = self.data['summary-hinglish']   ## the summary
