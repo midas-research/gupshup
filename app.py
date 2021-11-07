@@ -100,7 +100,7 @@ else:
         fp.close()
         st.write(summary)
 
-    if src_submit_button:
+    if src_submit_button and result!=None:
         if tar_file != None:
             st.write("scores: ", result)
 

@@ -34,6 +34,8 @@ from utils import (
     use_task_specific_params,
 )
 
+from evaluate_gpt import gpt_eval
+
 
 logger = getLogger(__name__)
 
@@ -205,6 +207,18 @@ def run_generate(
 
     if scor_path != None:
         args.score_path = scor_path
+
+    if args.model_name[-3:] == 'gpt':
+        gpt_eval(
+            model_name_path=args.model_name,
+            src_txt=args.input_path,
+            tar_txt=args.reference_path,
+            gen_path=args.save_path,
+            scor_path=args.score_path,
+            batch_size=args.bs
+        )
+        return None
+
 
     if parsed_args and verbose:
         print(f"parsed the following generate kwargs: {parsed_args}")
