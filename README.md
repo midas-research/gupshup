@@ -1,6 +1,6 @@
 # Gupshup
 GupShup: Summarizing Open-Domain Code-Switched Conversations EMNLP 2021
-
+Paper: [https://aclanthology.org/2021.emnlp-main.499.pdf](https://aclanthology.org/2021.emnlp-main.499.pdf)
 
 ### Dataset
 Please request for the Gupshup data using [this Google form](https://docs.google.com/forms/d/1zvUk7WcldVF3RCoHdWzQPzPprtSJClrnHoIOYbzaJEI/edit?ts=61381ec0). 
@@ -97,3 +97,20 @@ streamlit run app.py
 ```
 
 Please create an issue if you are facing any difficulties in replicating the results. 
+
+### References
+
+Please cite [[1]](https://arxiv.org/abs/1910.04073) if you found the resources in this repository useful.
+
+
+[1] Mehnaz, Laiba, Debanjan Mahata, Uma Sushmitha Gunturi, Amardeep Kumar, Rakesh Gosangi, Riya Jain, Gauri Gupta, Isabelle Lee, Anish Acharya, and Rajiv Ratn Shah [*GupShup: Summarizing Open-Domain Code-Switched Conversations*](https://aclanthology.org/2021.emnlp-main.499.pdf)
+
+
+```
+@article{mehnaz2021gupshup,
+  title={GupShup: An Annotated Corpus for Abstractive Summarization of Open-Domain Code-Switched Conversations},
+  author={Mehnaz, Laiba and Mahata, Debanjan and Gosangi, Rakesh and Gunturi, Uma Sushmitha and Jain, Riya and Gupta, Gauri and Kumar, Amardeep and Lee, Isabelle and Acharya, Anish and Shah, Rajiv Ratn},
+  journal={arXiv preprint arXiv:2104.08578},
+  year={2021}
+}
+```
