@@ -95,7 +95,7 @@ pip install -r requirements.txt
 ```
 streamlit run app.py
 ```
-![Image of Streamlit App](https://github.com/midas-research/gupshup/blob/main/images/app_image.png)
+![Image of Streamlit App](https://github.com/midas-research/gupshup/blob/main/images/emnlp-conversation.png)
 
 Please create an issue if you are facing any difficulties in replicating the results. 
 
