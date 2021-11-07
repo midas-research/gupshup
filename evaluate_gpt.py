@@ -149,7 +149,7 @@ def gpt_eval(
 					input_ids=input_ids,
 					max_length= 582,
 					min_length = 562 ,
-					temperature=a1.0,
+					temperature=1.0,
 					decoder_start_token_id= '<|summarize|>',
 					num_beams=4,
 					num_return_sequences=1)
