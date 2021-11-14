@@ -104,14 +104,16 @@ Please create an issue if you are facing any difficulties in replicating the res
 Please cite [[1]](https://arxiv.org/abs/1910.04073) if you found the resources in this repository useful.
 
 
-[1] Mehnaz, Laiba, Debanjan Mahata, Uma Sushmitha Gunturi, Amardeep Kumar, Rakesh Gosangi, Riya Jain, Gauri Gupta, Isabelle Lee, Anish Acharya, and Rajiv Ratn Shah [*GupShup: Summarizing Open-Domain Code-Switched Conversations*](https://aclanthology.org/2021.emnlp-main.499.pdf)
+[1] Mehnaz, Laiba, Debanjan Mahata, Rakesh Gosangi, Uma Sushmitha Gunturi, Riya Jain, Gauri Gupta, Amardeep Kumar, Isabelle G. Lee, Anish Acharya, and Rajiv Shah. [*GupShup: Summarizing Open-Domain Code-Switched Conversations*](https://aclanthology.org/2021.emnlp-main.499.pdf)
 
 
 ```
-@article{mehnaz2021gupshup,
-  title={GupShup: An Annotated Corpus for Abstractive Summarization of Open-Domain Code-Switched Conversations},
-  author={Mehnaz, Laiba and Mahata, Debanjan and Gosangi, Rakesh and Gunturi, Uma Sushmitha and Jain, Riya and Gupta, Gauri and Kumar, Amardeep and Lee, Isabelle and Acharya, Anish and Shah, Rajiv Ratn},
-  journal={arXiv preprint arXiv:2104.08578},
+@inproceedings{mehnaz2021gupshup,
+  title={GupShup: Summarizing Open-Domain Code-Switched Conversations},
+  author={Mehnaz, Laiba and Mahata, Debanjan and Gosangi, Rakesh and Gunturi, Uma Sushmitha and Jain, Riya and Gupta, Gauri and Kumar, Amardeep and Lee, Isabelle G and Acharya, Anish and Shah, Rajiv},
+  booktitle={Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing},
+  pages={6177--6192},
   year={2021}
 }
+
 ```
